@@ -6,11 +6,17 @@
     <%= f.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
   <% end %>
 </form>
-<div class="columns  is-multiline">
+
+<div class="row row-cols-1 row-cols-md-3">
+  <div class="card-deck">
 <% if @products.empty?%>
   <p>There no products yet</p>
 <% else %>
-<%= paginate @products %>
-<%= render partial: 'product', collection: @products %>
-<%= paginate @products %>
+
+  <%= paginate @products %>
+  <%= render partial: 'product', collection: @products %>
+  <%= paginate @products %>
+
 <% end %>
+ </div>
+</div>

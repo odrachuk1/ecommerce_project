@@ -1,11 +1,23 @@
-<div class="col-sm-6 text-left">
+<div class="row">
 <h2><%= @fragranceFamily.name%></h2>
 <h1> </h1>
 <h1 class="spaceq"> </h1>
 <p><%= @fragranceFamily.description%></p>
-<ul class="list-group">
-  <% @products.each do |product| %>
-     <li class="list-group-item"><%= link_to product.name, product %></li>
+</div>
+<form class="form-inline my-2 my-lg-0">
+  <%= simple_form_for :search, url: "/search", method: "GET", html: { class: 'form-inline' } do |f| %>
+    <%= f.input :name, :label => "Search fragrance:", :required => false, input_html: {value: ""}, html: { class: 'form-control mr-sm-2' } %>
+    <%= f.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
   <% end %>
-</ul>
+</form>
+ <div class="row row-cols-1 row-cols-md-3">
+  <div class="card-deck">
+<% if @products.empty?%>
+  <p>There no products yet</p>
+<% else %>
+
+  <%= render partial: 'product', collection: @products %>
+
+<% end %>
+ </div>
 </div>
