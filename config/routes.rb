@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  root to: "product#index"
   get 'product/index'
   get 'product/:id', to: "product#show", as: 'product' # product_path
   get 'category/index'

@@ -70,3 +70,7 @@ csv_file = Rails.root.join('db/brands.csv')
    end
 
    puts "Created #{Product.count} Products"
+
+   if Rails.env.development?
+      AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+   end
