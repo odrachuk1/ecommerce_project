@@ -1,0 +1,13 @@
+<div class="column">
+  <div class="card" style="width:400px">
+  <div>
+    <figure class="small_image">
+      <%= image_tag product.image, :class => "small_image" %>
+    </figure>
+  </div>
+  <div class="card-body">
+    <p class="card-title"><%= link_to product.name, product %></p>
+    <p class="card-text">CAD $<%= product.price %></p>
+    <p class="card-text"><%= product.volume %> ml</p>
+  </div>
+</div>

@@ -1,11 +1,16 @@
-<h1>Product#index</h1>
+<h2 class="title is-2">Fragrances</h2>
+
+<form class="form-inline my-2 my-lg-0">
+  <%= simple_form_for :search, url: "/search", method: "GET", html: { class: 'form-inline' } do |f| %>
+    <%= f.input :name, :label => "Search fragrance:", :required => false, input_html: {value: ""}, html: { class: 'form-control mr-sm-2' } %>
+    <%= f.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+  <% end %>
+</form>
+<div class="columns  is-multiline">
 <% if @products.empty?%>
   <p>There no products yet</p>
 <% else %>
-<ul class="list-group"></ul>
-
-  <% @products.each do |product| %>
-    <li class="list-group-item"><%= link_to product.name, product %></li>
-  <% end %>
-</ul>
+<%= paginate @products %>
+<%= render partial: 'product', collection: @products %>
+<%= paginate @products %>
 <% end %>
