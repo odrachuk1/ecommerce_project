@@ -1,0 +1,2 @@
+class FragranceFamily < ApplicationRecord
+end
