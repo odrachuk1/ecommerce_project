@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'category/index'
+  get 'category/show'
   get 'fragrance_family/index'
   get 'fragrance_family/show'
   get 'brand/index'
