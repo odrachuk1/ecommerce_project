@@ -1,2 +1,11 @@
 <h1>Brand#index</h1>
-<p>Find me in app/views/brand/index.html.erb</p>
+<% if @brands.empty?%>
+  <p>There no products yet</p>
+<% else %>
+<ul class="list-group"></ul>
+
+  <% @brands.each do |brand| %>
+    <li class="list-group-item"><%= link_to brand.name, brand%></li>
+  <% end %>
+</ul>
+<% end %>

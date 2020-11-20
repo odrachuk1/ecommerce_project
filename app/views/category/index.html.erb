@@ -1,2 +1,11 @@
 <h1>Category#index</h1>
-<p>Find me in app/views/category/index.html.erb</p>
+<% if @categories.empty?%>
+  <p>There no products yet</p>
+<% else %>
+<ul class="list-group"></ul>
+
+  <% @categories.each do |category| %>
+    <li class="list-group-item"><%= link_to category.name, category %></li>
+  <% end %>
+</ul>
+<% end %>
