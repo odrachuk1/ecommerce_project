@@ -8,5 +8,5 @@ class Product < ApplicationRecord
   belongs_to :brand
   belongs_to :fragrance_family
 
-  paginates_per 5
+  paginates_per 10
 end

@@ -3,5 +3,5 @@ class FragranceFamily < ApplicationRecord
   has_many :products
   validates_associated :products
 
-  paginates_per 5
+  paginates_per 10
 end

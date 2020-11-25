@@ -6,7 +6,7 @@ class FragranceFamilyController < ApplicationController
   def show
     @fragranceFamily = FragranceFamily.find_by(id: params[:id])
     @family_id = params[:id]
-    @products = Product.select("id", "name", "image", "price", "volume").where(fragrance_family_id: @family_id)
+    @products = Product.select("id", "name", "image", "price", "volume").where(fragrance_family_id: @family_id).page(params[:page])
     @search = params["search"]
     if @search.present?
       @name = @search["name"]

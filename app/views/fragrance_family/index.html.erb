@@ -1,11 +1,12 @@
-<h1>FragranceFamily#index</h1>
+<h1 class="display-3">Fragrance Families</h1>
+<div class="container">
 <% if @fragranceFamilies.empty?%>
   <p>There no products yet</p>
 <% else %>
 <ul class="list-group"></ul>
-
   <% @fragranceFamilies.each do |family| %>
     <li class="list-group-item"><%= link_to family.name, family %></li>
   <% end %>
 </ul>
 <% end %>
+</div>
