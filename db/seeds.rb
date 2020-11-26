@@ -59,7 +59,6 @@ csv_file = Rails.root.join('db/brands.csv')
     b.description = product['description']
     b.price = product['price']
     b.volume = product['volume']
-    b.image = product['image']
     b.stock_amount = product['stock_amount']
     b.sale = product['sale']
     b.fragrance_family_id = product['fragrance_family_id']
