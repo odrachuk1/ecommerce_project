@@ -4,4 +4,7 @@
 <%= image_tag @product.image, :class => "style_image" %>
 <h1 class="spaceq"> </h1>
 <p><%= @product.description%></p>
+<p class="card-text">CAD $<%= @product.price %></p>
+<p class="card-text"><%= @product.volume %> ml</p>
+<p class="card-text"><%= link_to 'add to cart', add_to_cart_path(@product.id), method: :post %></p>
 </div>

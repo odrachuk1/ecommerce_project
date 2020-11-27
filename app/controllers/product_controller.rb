@@ -10,6 +10,12 @@ class ProductController < ApplicationController
 
   def show
     @product = Product.find_by(id: params[:id])
-
   end
+
+  def add_to_cart
+    id = params[:id].to_i
+    session[:cart] << id unless session[:cart].include?(id)
+    redirect_to :controller => 'cart', :action => 'index'
+  end
+
 end
