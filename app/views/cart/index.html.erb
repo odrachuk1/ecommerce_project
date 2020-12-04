@@ -13,7 +13,12 @@
     <% @cart.each do |product| %>
       <tr>
         <td><%= product.name%></td>
-        <td></td>
+        <td>
+          <%= form_for line_item do |f| %>
+            <%= f.select_tag :quantity, 'options_for_quantity' %>
+            <%= f.submit, method: :patch %>
+          <% end %>
+        </td>
         <td><%= product.price%></td>
         <td><%= button_to 'remove from cart', remove_from_cart_path(product), method: :delete %></td>
       </tr>

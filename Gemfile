@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simple_form'
 gem 'kaminari'
+
+gem "google-cloud-storage", "~> 1.11", require: false
+gem 'stripe'

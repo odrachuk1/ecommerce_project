@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'brand/index'
   get 'brand/:id', to: "brand#show", as: 'brand' # brand_path
   post 'product/add_to_cart/:id', to: 'product#add_to_cart', as: 'add_to_cart'
+  patch 'cart/update_quantity/:quantity', to: 'product#update_quantity', as: 'update_quantity'
   delete 'cart/remove_from_cart/:id', to: 'cart#remove_from_cart', as: 'remove_from_cart'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
