@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @customer = Customer.find_by(email: params[:email])
-    if @customer && @customer.authenticate(params[:password_digest])
+    if @customer && @customer.authenticate(params[:password])
         reset_session
         session[:customer_id] = @customer.id
         redirect_to root_path
@@ -16,4 +16,11 @@ class SessionsController < ApplicationController
 
   def login
   end
+
+  def destroy
+    session.delete(:customer_id)
+    @customer = nil
+    redirect_to root_path
+  end
+
 end
