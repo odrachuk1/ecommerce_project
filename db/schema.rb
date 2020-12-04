@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_064923) do
+ActiveRecord::Schema.define(version: 2020_12_04_065805) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "about"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_064923) do
 
   create_table "customers", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "full_name"
     t.text "default_shipping_address"
     t.datetime "created_at", precision: 6, null: false
