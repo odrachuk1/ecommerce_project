@@ -13,6 +13,5 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     !current_customer.nil?
-    current_customer
   end
 end

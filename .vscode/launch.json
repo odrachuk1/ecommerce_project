@@ -1,0 +1,24 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "useBundler": true,
+      "pathToBundler": "/home/xenorin/.rbenv/shims/bundle",
+      "pathToRDebugIDE": "/home/xenorin/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/ruby-debug-ide-0.7.2",
+      "program": "${workspaceRoot}/bin/rails",
+      "showDebuggerOutput": true,
+      "args": [
+        "server",
+      ],
+      "env": {
+      }
+    }
+  ]
+}

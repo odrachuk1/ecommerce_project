@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   delete 'cart/remove_from_cart/:id', to: 'cart#remove_from_cart', as: 'remove_from_cart'
   get 'customer/new', to: 'customer#new', as: 'new_customer'
   get 'customer/create', to: 'customer#create'
+  resources :customers, only: [:new, :create]
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
