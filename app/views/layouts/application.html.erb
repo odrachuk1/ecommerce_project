@@ -76,7 +76,7 @@
         <nav class="navbar navbar-expand-sm navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <h4 class="navbar-brand">Fragranse Boutique</h4>
+              <h4 class="navbar-brand">Fragrance Boutique</h4>
             </div>
             <ul class="nav navbar-nav">
               <li class="active"><%= link_to 'Home', root_path %></li>
@@ -85,6 +85,11 @@
               <li class="nav-item"><%= link_to 'Categories', '/category/index' %></li>
               <li class="nav-item"><%= link_to 'Fragrance Family', '/fragrance_family/index' %></li>
               <li class="nav-item"><%= link_to 'My Cart', '/cart/index' %></li>
+              <li class="nav-item"><%= button_to "Login", '/login', method: :get%></li>
+              <li class="nav-item"><%= button_to "Sign Up", '/customer/new', method: :get%></li>
+              <% if logged_in? %>
+                <li class="nav-item">You are Logged In, <%= current_customer.email %></li>
+              <%end%>
             </ul>
           </div>
         </nav>

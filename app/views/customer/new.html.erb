@@ -1,0 +1,12 @@
+  <%= simple_form_for @customer, url: "/customer/new", method: "GET" do |f|%>
+    <%= f.label :email%><br>
+    <%= f.text_field :email%><br>
+    <%= f.label :password%><br>
+    <%= f.password_field :password%><br>
+    <%= f.label :full_name%><br>
+    <%= f.input  :full_name%><br>
+    <%= f.label :default_shipping_address%><br>
+    <%= f.input  :default_shipping_address%><br>
+    <%= f.association :province, collection: Province.order(:name), prompt: "Choose a Province"%>
+    <%= f.submit %>
+<% end %>

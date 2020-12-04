@@ -68,7 +68,23 @@ csv_file = Rails.root.join('db/brands.csv')
     puts "#{b.name}  saved"
    end
 
-   puts "Created #{Product.count} Products"
+   puts "Created #{Province.count} Provinces"
+
+   csv_file = Rails.root.join('db/provinces.csv')
+   csv_data = File.path(csv_file)
+
+   CSV.foreach(csv_data, liberal_parsing: true, headers: :first_row) do |province|
+    b = Province.new
+    b.id = province['id']
+    b.name = province['name']
+    b.gst_hst = province['gst_hst']
+    b.pst = province['pst']
+
+    b.save
+    puts "#{b.name}  saved"
+   end
+
+   puts "Created #{Province.count} Provinces"
 
    if Rails.env.development?
       AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
