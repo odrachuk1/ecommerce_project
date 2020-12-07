@@ -14,7 +14,12 @@ class ProductController < ApplicationController
 
   def add_to_cart
     id = params[:id].to_i
-    session[:cart] << id unless session[:cart].include?(id)
+    @product = Product.find_by(id: params[:id])
+    name = @product.name
+    price = @product.price
+    unless session[:cart].include?(id)
+      session[:cart] << {"id" => id, "quantity" => 1, "name" => name, "price" => price}
+    end
     redirect_to :controller => 'cart', :action => 'index'
   end
 

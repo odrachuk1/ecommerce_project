@@ -2,24 +2,34 @@
 <div class="container-fluid">
   <table class="table table-striped">
     <thead>
-        <tr>
-          <th>Product</th>
-          <th>Count</th>
-          <th>Price</th>
-          <th></th>
-        </tr>
+    <tr>
+      <th>Product</th>
+      <th>Count</th>
+      <th>Price</th>
+      <th></th>
+      <th>Subtotal</th>
+    </tr>
     </thead>
     <tbody>
-    <% @cart.each do |product| %>
-      <tr>
-        <td><%= product.name%></td>
-        <td>
-          <input type="number" id="quantity" name="quantity" min="1" max="5">
-        </td>
-        <td><%= product.price%></td>
-        <td><%= button_to 'remove from cart', remove_from_cart_path(product), method: :delete %></td>
-      </tr>
+    <% @products.each do |product| %>
+      <% unless product.nil? %>
+        <tr>
+          <td><%= product["name"] %></td>
+          <td>
+            <%= product["quantity"] %></td>
+          </td>
+          <td><%= product["price"] %></td>
+          <td><%= button_to 'remove from cart', remove_from_cart_path(:id=>product["id"]), method: :delete %></td>
+          <td><%= product["quantity"]*product["price"].to_f %></td>
+        </tr>
+      <% end %>
     <% end %>
     </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td><%= @total %></td>
+      </tr>
+    </tfoot>
   </table>
 </div>

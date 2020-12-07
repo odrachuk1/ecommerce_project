@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :initialize_session
   helper_method :current_customer
   helper_method :logged_in?
   private
