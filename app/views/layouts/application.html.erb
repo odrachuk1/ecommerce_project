@@ -86,11 +86,11 @@
               <li class="nav-item"><%= link_to 'Fragrance Family', '/fragrance_family/index' %></li>
               <li class="nav-item"><%= link_to 'My Cart', '/cart/index' %></li>
               <% if logged_in? %>
-                <li class="nav-item"><%= button_to "Logout", '/destroy', method: :get%></li>
-                <li class="nav-item">You are Logged In, <%= current_customer.email %></li>
+                <li class="nav-item"><%= button_to "Logout", '/destroy', method: :get, class: "btn btn-primary" %></li>
+                <li class="btn btn-dark">You are Logged In, <%= current_customer.email %></li>
               <% else %>
-                <li class="nav-item"><%= button_to "Login", '/login', method: :get%></li>
-                <li class="nav-item"><%= button_to "Sign Up", '/customer/new', method: :get%></li>
+                <li class="nav-item"><%= button_to "Login", '/login', method: :get, class: "btn btn-primary" %></li>
+                <li class="nav-item"><%= button_to "Sign Up", '/customer/new', method: :get, class: "btn btn-primary" %></li>
               <%end%>
             </ul>
           </div>
