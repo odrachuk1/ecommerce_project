@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'destroy', to: 'sessions#destroy'
+  post 'cart/qty/:id', to: 'cart#qty', as: 'qty_line_item_add'
+  delete 'cart/qty/:id', to: 'cart#qty', as: 'qty_line_item_delete'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

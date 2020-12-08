@@ -1,10 +1,12 @@
 <h1 class="display-3">Shopping Cart</h1>
+<%= javascript_pack_tag 'cart.js' %>
 <div class="container-fluid">
   <table class="table table-striped">
     <thead>
     <tr>
       <th>Product</th>
       <th>Count</th>
+      <th></th>
       <th>Price</th>
       <th></th>
       <th>Subtotal</th>
@@ -18,9 +20,11 @@
           <td>
             <%= product["quantity"] %></td>
           </td>
+          <td><%= link_to "+", qty_line_item_add_path(:id=>product["id"]), method: :post, remote: true %><%= link_to "-", qty_line_item_delete_path(:id=>product["id"]), method: :delete, remote: true %></td>
           <td><%= product["price"] %></td>
           <td><%= button_to 'remove from cart', remove_from_cart_path(:id=>product["id"]), method: :delete %></td>
           <td><%= product["quantity"]*product["price"].to_f %></td>
+
         </tr>
       <% end %>
     <% end %>
