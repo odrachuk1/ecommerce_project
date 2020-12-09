@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cebbff2-6447-4968-9212-0ca2df1b7a66" name="Default Changelist" comment="" />
+    <list default="true" id="3cebbff2-6447-4968-9212-0ca2df1b7a66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/checkout_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/checkout_controller.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +59,10 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="PUBLISHABLE_KEY" value="pk_test_51HuSyYF4NyKarisZ0M2yFZViz2GfZYn7yblxXGwfp0sOjJWSceuj6QBGdAScek1UyBVV61mTYQ2EupRmp8YAGCpS00FWoXoh34" />
+        <env name="SECRET_KEY" value="sk_test_51HuSyYF4NyKarisZtvMOJqJXv5q91osO7YcIa8MfKE23umBt1xX8gCzq96H1rsg9jKejnD96ruYaPIMBnO0XsoS4004gIlEoOm" />
+      </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
@@ -155,6 +162,7 @@
       <workItem from="1607390542789" duration="5658000" />
       <workItem from="1607481489755" duration="5591000" />
       <workItem from="1607488189618" duration="3004000" />
+      <workItem from="1607533556337" duration="1717000" />
     </task>
     <servers />
   </component>
