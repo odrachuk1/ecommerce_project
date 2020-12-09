@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   def initialize_session
     session[:cart] ||= []
+
   end
 
   def current_customer

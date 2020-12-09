@@ -51,7 +51,7 @@
       <td class='total'>CAD<%= number_to_currency(@total) %></td>
     </tr>
     <tr>
-      <td><%= button_to 'Checkout', checkout_create_path, method: :post,  params: {total: @total}, remote: true, class: "btn btn-dark"%></td>
+      <td><%= button_to 'Checkout', checkout_create_path, method: :post,  params: {total: @total, taxes: @taxes}, remote: true, class: "btn btn-dark"%></td>
     </tr>
     </tfoot>
   </table>

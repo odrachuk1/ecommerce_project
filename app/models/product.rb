@@ -8,5 +8,6 @@ class Product < ApplicationRecord
   belongs_to :brand
   belongs_to :fragrance_family
   has_one_attached :image
+  has_many :order_details
   paginates_per 10
 end

@@ -3,7 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="3cebbff2-6447-4968-9212-0ca2df1b7a66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/checkout_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/checkout_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/order_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/order_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/customer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/customer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/order.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/order.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/order_detail.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/order_detail.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/province.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/province.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/status.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/status.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cart/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cart/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/order/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +175,8 @@
       <workItem from="1607481489755" duration="5591000" />
       <workItem from="1607488189618" duration="3004000" />
       <workItem from="1607533556337" duration="1717000" />
+      <workItem from="1607543413348" duration="421000" />
+      <workItem from="1607544448352" duration="4747000" />
     </task>
     <servers />
   </component>
@@ -188,6 +202,22 @@
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/checkout_controller.rb</url>
+          <line>33</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/order_controller.rb</url>
+          <line>7</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/javascript/packs/cart.js</url>
           <line>1</line>
@@ -201,6 +231,7 @@
         <watch expression="session" language="ruby" />
         <watch expression="session[:cart]" language="ruby" />
         <watch expression="@products" />
+        <watch expression="session[:order]" language="ruby" />
       </configuration>
     </watches-manager>
   </component>

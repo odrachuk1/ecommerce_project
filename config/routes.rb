@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'order_detail/new'
   get 'order_detail/create'
-  get 'order/new'
+  get 'order/index'
   get 'order/create'
   get 'sessions/new'
   get 'sessions/create'
