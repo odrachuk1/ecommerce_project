@@ -6,7 +6,7 @@ class BrandController < ApplicationController
   def show
     @brand = Brand.find_by(id: params[:id])
     @brand_id = params[:id]
-    @products = Product.select("id", "name", "image", "price", "volume", "brand_id").where(brand_id: @brand_id).page(params[:page])
+    @products = Product.select("id", "name", "price", "volume", "brand_id").where(brand_id: @brand_id).page(params[:page])
     @search = params["search"]
     if @search.present?
       @name = @search["name"]

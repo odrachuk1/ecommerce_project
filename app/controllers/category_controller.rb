@@ -6,7 +6,7 @@ class CategoryController < ApplicationController
   def show
     @category = Category.find_by(id: params[:id])
     @category_id = params[:id]
-    @products = Product.select("id", "name", "image", "price", "volume", "category_id").where(category_id: @category_id).page(params[:page])
+    @products = Product.select("id", "name", "price", "volume", "category_id").where(category_id: @category_id).page(params[:page])
     @search = params["search"]
     if @search.present?
       @name = @search["name"]
