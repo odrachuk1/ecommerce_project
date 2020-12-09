@@ -26,5 +26,10 @@ Rails.application.routes.draw do
   get 'destroy', to: 'sessions#destroy'
   post 'cart/qty/:id', to: 'cart#qty', as: 'qty_line_item_add'
   delete 'cart/qty/:id', to: 'cart#qty', as: 'qty_line_item_delete'
+  scope '/checkout' do
+    post 'create', to: 'checkout#create', as: 'checkout_create'
+    get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
+    get 'success', to: 'checkout#success', as: 'checkout_success'
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
