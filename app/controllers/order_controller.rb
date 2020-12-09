@@ -10,7 +10,7 @@ class OrderController < ApplicationController
     payment_intent = params[:payment_intent]
     order = Order.create(:customer_id => customer.id.to_s, :total => total.to_d, :taxes => taxes.to_d, :shipping_address => customer.default_shipping_address.to_s, :province_id => customer.province_id.to_i, :order_status_id => 1, :payment_intent => payment_intent.to_s)
     session.delete(:order)
-    session.delete(:order)
+    session.delete(:cart)
     redirect_to '/order/index'
   end
 end

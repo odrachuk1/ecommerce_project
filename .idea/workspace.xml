@@ -4,7 +4,6 @@
     <list default="true" id="3cebbff2-6447-4968-9212-0ca2df1b7a66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/order_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/order_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/fragrance_family/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/fragrance_family/_product.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +165,7 @@
       <workItem from="1607533556337" duration="1717000" />
       <workItem from="1607543413348" duration="421000" />
       <workItem from="1607544448352" duration="4747000" />
-      <workItem from="1607549480259" duration="482000" />
+      <workItem from="1607549480259" duration="1115000" />
     </task>
     <servers />
   </component>
