@@ -5,35 +5,54 @@
     <thead>
     <tr>
       <th>Product</th>
-      <th>Count</th>
+      <th>Quantity</th>
       <th></th>
-      <th>Price</th>
+      <th>Product Price</th>
       <th></th>
-      <th>Subtotal</th>
+      <th>Total Price</th>
     </tr>
     </thead>
     <tbody>
     <% @products.each do |product| %>
       <% unless product.nil? %>
-        <tr>
+        <tr class='product' id='id_<%= product["id"] %>'>
           <td><%= product["name"] %></td>
-          <td>
+          <td class='quantity'>
             <%= product["quantity"] %></td>
           </td>
-          <td><%= link_to "+", qty_line_item_add_path(:id=>product["id"]), method: :post, remote: true %><%= link_to "-", qty_line_item_delete_path(:id=>product["id"]), method: :delete, remote: true %></td>
-          <td><%= product["price"] %></td>
-          <td><%= button_to 'remove from cart', remove_from_cart_path(:id=>product["id"]), method: :delete %></td>
-          <td><%= product["quantity"]*product["price"].to_f %></td>
-
+          <td>
+            <div style="float:left;">
+              <%= button_to "+", qty_line_item_add_path(:id => product["id"], :operation => "plus"),
+                            method: :post, remote: true %>
+            </div>
+            <div style="float:left;">
+              <%= button_to "-", qty_line_item_delete_path(:id => product["id"], :operation => "minus"),
+                            method: :post, remote: true %>
+            </div>
+          </td>
+          <td><%= number_to_currency(product["price"]) %></td>
+          <td><%= button_to 'Remove', remove_from_cart_path(:id => product["id"]), method: :delete, remote: true %></td>
+          <td class='product_total'><%= number_to_currency(product["quantity"] * product["price"].to_f) %></td>
         </tr>
       <% end %>
     <% end %>
     </tbody>
     <tfoot>
-      <tr>
-        <td>Total</td>
-        <td><%= @total %></td>
-      </tr>
+    <tr>
+      <td>Subtotal</td>
+      <td class='subtotal'>CAD<%= number_to_currency(@subtotal) %></td>
+    </tr>
+    <tr>
+      <td>Taxes</td>
+      <td class='taxes'>CAD<%= number_to_currency(@taxes) %></td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td class='total'>CAD<%= number_to_currency(@total) %></td>
+    </tr>
+    <tr>
+
+    </tr>
     </tfoot>
   </table>
 </div>

@@ -3,15 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="3cebbff2-6447-4968-9212-0ca2df1b7a66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/cart_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cart_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/product_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/product_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/cart/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cart/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product/_product.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +32,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1lBAwsDoK5UT2SvyE7hCFBgmlEY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,6 +48,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\1RRC\Term5\WEBD2007\EcomerceProject\ecommerce\app\javascript\packs" />
+    </key>
   </component>
   <component name="RunManager" selected="Rails.Development: ecommerce">
     <configuration name="Development: ecommerce" type="RailsRunConfigurationType" factoryName="Rails">
@@ -143,6 +159,9 @@
       <workItem from="1607319290538" duration="93000" />
       <workItem from="1607319579824" duration="3201000" />
       <workItem from="1607324117656" duration="325000" />
+      <workItem from="1607390542789" duration="5658000" />
+      <workItem from="1607481489755" duration="5591000" />
+      <workItem from="1607488189618" duration="2581000" />
     </task>
     <servers />
   </component>
@@ -168,13 +187,10 @@
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/cart_controller.rb</url>
-          <line>3</line>
-          <properties myBlockOrdinal="-1">
-            <option name="block-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="15" />
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/javascript/packs/cart.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -183,7 +199,7 @@
         <watch expression="params" />
         <watch expression="session" language="ruby" />
         <watch expression="session[:cart]" language="ruby" />
-        <watch expression="@products" language="RHTML" />
+        <watch expression="@products" />
       </configuration>
     </watches-manager>
   </component>

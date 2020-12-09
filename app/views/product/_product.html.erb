@@ -9,7 +9,7 @@
   </div>
   <div class="card-body">
     <p class="card-title"><%= link_to product.name, product %></p>
-    <p class="card-text">CAD $<%= product.price %></p>
+    <p class="card-text">CAD <%= number_to_currency(product.price) %></p>
     <p class="card-text"><%= product.volume %> ml</p>
   </div>
   </div>
