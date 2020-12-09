@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_065805) do
+ActiveRecord::Schema.define(version: 2020_12_09_191732) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "about"
@@ -75,6 +75,20 @@ ActiveRecord::Schema.define(version: 2020_12_04_065805) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "product_id", null: false
+    t.integer "cart_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["product_id"], name: "index_cart_items_on_product_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -97,6 +111,27 @@ ActiveRecord::Schema.define(version: 2020_12_04_065805) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer "instrument_id", null: false
+    t.integer "cart_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_line_items_on_cart_id"
+    t.index ["instrument_id"], name: "index_line_items_on_instrument_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "customer_id"
+    t.decimal "total"
+    t.decimal "taxes"
+    t.string "shipping_address"
+    t.integer "province_id"
+    t.integer "order_status_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "payment_intent"
   end
 
   create_table "products", force: :cascade do |t|
@@ -129,4 +164,8 @@ ActiveRecord::Schema.define(version: 2020_12_04_065805) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cart_items", "carts"
+  add_foreign_key "cart_items", "products"
+  add_foreign_key "line_items", "carts"
+  add_foreign_key "line_items", "instruments"
 end

@@ -4,6 +4,8 @@ Product.destroy_all
 Brand.destroy_all
 FragranceFamily.destroy_all
 Category.destroy_all
+Province.destroy_all
+Status.destroy_all
 
 csv_file = Rails.root.join('db/brands.csv')
    csv_data = File.path(csv_file)
@@ -85,6 +87,21 @@ csv_file = Rails.root.join('db/brands.csv')
    end
 
    puts "Created #{Province.count} Provinces"
+
+   csv_file = Rails.root.join('db/statuses.csv')
+   csv_data = File.path(csv_file)
+
+   CSV.foreach(csv_data, liberal_parsing: true, headers: :first_row) do |status|
+    b = Status.new
+    b.id = status['id']
+    b.name = status['name']
+    b.description = status['description']
+
+    b.save
+    puts "#{b.name}  saved"
+   end
+
+   puts "Created #{Status.count} Statuses"
 
    if Rails.env.development?
       AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
